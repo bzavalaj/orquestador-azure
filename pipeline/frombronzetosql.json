@@ -61,7 +61,7 @@
 							"referenceName": "linkedService2",
 							"type": "LinkedServiceReference"
 						},
-						"path": "staging"
+						"path": "input/data"
 					},
 					"translator": {
 						"type": "TabularTranslator",
