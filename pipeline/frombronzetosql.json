@@ -1,0 +1,7 @@
+{
+	"name": "frombronzetosql",
+	"properties": {
+		"description": "ingest from blob to bronze databricks and copy to sql",
+		"annotations": []
+	}
+}
