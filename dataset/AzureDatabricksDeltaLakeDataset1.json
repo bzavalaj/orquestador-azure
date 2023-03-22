@@ -1,0 +1,161 @@
+{
+	"name": "AzureDatabricksDeltaLakeDataset1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatabricksDeltaLake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "default",
+			"table": "bronze"
+		},
+		"schema": [
+			{
+				"name": "Employee_Name",
+				"type": "string"
+			},
+			{
+				"name": "EmpID",
+				"type": "string"
+			},
+			{
+				"name": "MarriedID",
+				"type": "string"
+			},
+			{
+				"name": "MaritalStatusID",
+				"type": "string"
+			},
+			{
+				"name": "GenderID",
+				"type": "string"
+			},
+			{
+				"name": "EmpStatusID",
+				"type": "string"
+			},
+			{
+				"name": "DeptID",
+				"type": "string"
+			},
+			{
+				"name": "PerfScoreID",
+				"type": "string"
+			},
+			{
+				"name": "FromDiversityJobFairID",
+				"type": "string"
+			},
+			{
+				"name": "Salary",
+				"type": "string"
+			},
+			{
+				"name": "Termd",
+				"type": "string"
+			},
+			{
+				"name": "PositionID",
+				"type": "string"
+			},
+			{
+				"name": "Position",
+				"type": "string"
+			},
+			{
+				"name": "State",
+				"type": "string"
+			},
+			{
+				"name": "Zip",
+				"type": "string"
+			},
+			{
+				"name": "DOB",
+				"type": "string"
+			},
+			{
+				"name": "Sex",
+				"type": "string"
+			},
+			{
+				"name": "MaritalDesc",
+				"type": "string"
+			},
+			{
+				"name": "CitizenDesc",
+				"type": "string"
+			},
+			{
+				"name": "HispanicLatino",
+				"type": "string"
+			},
+			{
+				"name": "RaceDesc",
+				"type": "string"
+			},
+			{
+				"name": "DateofHire",
+				"type": "string"
+			},
+			{
+				"name": "DateofTermination",
+				"type": "string"
+			},
+			{
+				"name": "TermReason",
+				"type": "string"
+			},
+			{
+				"name": "EmploymentStatus",
+				"type": "string"
+			},
+			{
+				"name": "Department",
+				"type": "string"
+			},
+			{
+				"name": "ManagerName",
+				"type": "string"
+			},
+			{
+				"name": "ManagerID",
+				"type": "string"
+			},
+			{
+				"name": "RecruitmentSource",
+				"type": "string"
+			},
+			{
+				"name": "PerformanceScore",
+				"type": "string"
+			},
+			{
+				"name": "EngagementSurvey",
+				"type": "string"
+			},
+			{
+				"name": "EmpSatisfaction",
+				"type": "string"
+			},
+			{
+				"name": "SpecialProjectsCount",
+				"type": "string"
+			},
+			{
+				"name": "LastPerformanceReview_Date",
+				"type": "string"
+			},
+			{
+				"name": "DaysLateLast30",
+				"type": "string"
+			},
+			{
+				"name": "Absences",
+				"type": "string"
+			}
+		]
+	}
+}
