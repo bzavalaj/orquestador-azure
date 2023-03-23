@@ -32,7 +32,8 @@
 							"referenceName": "linkedService1",
 							"type": "LinkedServiceReference"
 						},
-						"path": "staging"
+						"path": "staging",
+						"enableCompression": true
 					},
 					"translator": {
 						"type": "TabularTranslator",
