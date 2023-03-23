@@ -1,0 +1,139 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureDatabricksDeltaLakeSource",
+						"exportSettings": {
+							"type": "AzureDatabricksDeltaLakeExportCommand"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "staging"
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Employee_Name",
+									"type": "string"
+								},
+								"sink": {
+									"name": "Employee_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GenderID",
+									"type": "Int"
+								},
+								"sink": {
+									"name": "GenderID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "PositionID",
+									"type": "Int"
+								},
+								"sink": {
+									"name": "PositionID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Position",
+									"type": "string"
+								},
+								"sink": {
+									"name": "Position",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DateofHire",
+									"type": "string"
+								},
+								"sink": {
+									"name": "DateofHire",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DateofTermination",
+									"type": "string"
+								},
+								"sink": {
+									"name": "DateofTermination",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Department",
+									"type": "string"
+								},
+								"sink": {
+									"name": "Department",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RecruitmentSource",
+									"type": "string"
+								},
+								"sink": {
+									"name": "RecruitmentSource",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureDatabricksDeltaLakeDataset1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
