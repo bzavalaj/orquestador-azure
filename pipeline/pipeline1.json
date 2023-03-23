@@ -26,7 +26,15 @@
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "staging",
+						"enableCompression": true
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
