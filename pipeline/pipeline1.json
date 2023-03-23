@@ -33,7 +33,7 @@
 							"type": "LinkedServiceReference"
 						},
 						"path": "staging",
-						"enableCompression": true
+						"enableCompression": false
 					},
 					"translator": {
 						"type": "TabularTranslator",
