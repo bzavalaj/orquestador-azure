@@ -7,7 +7,42 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "Employee_Name",
+				"type": "text"
+			},
+			{
+				"name": "GenderID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PositionID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Position",
+				"type": "text"
+			},
+			{
+				"name": "DateofHire",
+				"type": "text"
+			},
+			{
+				"name": "DateofTermination",
+				"type": "text"
+			},
+			{
+				"name": "Department",
+				"type": "text"
+			},
+			{
+				"name": "RecruitmentSource",
+				"type": "text"
+			}
+		],
 		"typeProperties": {
 			"schema": "dbo",
 			"table": "gold"
