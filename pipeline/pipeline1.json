@@ -22,9 +22,15 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
+						}
 					},
 					"enableStaging": true,
 					"stagingSettings": {
@@ -55,7 +61,7 @@
 								},
 								"sink": {
 									"name": "GenderID",
-									"type": "Int32"
+									"type": "String"
 								}
 							},
 							{
@@ -65,7 +71,7 @@
 								},
 								"sink": {
 									"name": "PositionID",
-									"type": "Int32"
+									"type": "String"
 								}
 							},
 							{
@@ -129,7 +135,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				]
