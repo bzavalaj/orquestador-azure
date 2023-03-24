@@ -32,7 +32,7 @@
 							"referenceName": "linkedService24marzoadls",
 							"type": "LinkedServiceReference"
 						},
-						"path": "staging"
+						"path": ""
 					},
 					"translator": {
 						"type": "TabularTranslator",
