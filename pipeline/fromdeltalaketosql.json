@@ -22,9 +22,15 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": true,
 					"stagingSettings": {
@@ -43,8 +49,8 @@
 									"type": "string"
 								},
 								"sink": {
-									"name": "Employee_Name",
-									"type": "String"
+									"type": "String",
+									"ordinal": 1
 								}
 							},
 							{
@@ -53,8 +59,8 @@
 									"type": "Int"
 								},
 								"sink": {
-									"name": "GenderID",
-									"type": "Int32"
+									"type": "String",
+									"ordinal": 2
 								}
 							},
 							{
@@ -63,8 +69,8 @@
 									"type": "Int"
 								},
 								"sink": {
-									"name": "PositionID",
-									"type": "Int32"
+									"type": "String",
+									"ordinal": 3
 								}
 							},
 							{
@@ -73,8 +79,8 @@
 									"type": "string"
 								},
 								"sink": {
-									"name": "Position",
-									"type": "String"
+									"type": "String",
+									"ordinal": 4
 								}
 							},
 							{
@@ -83,8 +89,8 @@
 									"type": "string"
 								},
 								"sink": {
-									"name": "DateofHire",
-									"type": "String"
+									"type": "String",
+									"ordinal": 5
 								}
 							},
 							{
@@ -93,8 +99,8 @@
 									"type": "string"
 								},
 								"sink": {
-									"name": "DateofTermination",
-									"type": "String"
+									"type": "String",
+									"ordinal": 6
 								}
 							},
 							{
@@ -103,8 +109,8 @@
 									"type": "string"
 								},
 								"sink": {
-									"name": "Department",
-									"type": "String"
+									"type": "String",
+									"ordinal": 7
 								}
 							},
 							{
@@ -113,8 +119,8 @@
 									"type": "string"
 								},
 								"sink": {
-									"name": "RecruitmentSource",
-									"type": "String"
+									"type": "String",
+									"ordinal": 8
 								}
 							}
 						]
@@ -128,7 +134,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DelimitedText2",
 						"type": "DatasetReference"
 					}
 				]
