@@ -29,7 +29,7 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "linkedService24marzo",
+							"referenceName": "linkedService24marzoadls",
 							"type": "LinkedServiceReference"
 						},
 						"path": "staging"
