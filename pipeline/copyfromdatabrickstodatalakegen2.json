@@ -24,7 +24,7 @@
 					"sink": {
 						"type": "ParquetSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "AzureBlobStorageWriteSettings"
 						},
 						"formatSettings": {
 							"type": "ParquetWriteSettings"
@@ -40,7 +40,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Parquet1",
+						"referenceName": "Parquet3",
 						"type": "DatasetReference"
 					}
 				]
