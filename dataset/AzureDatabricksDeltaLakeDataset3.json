@@ -1,0 +1,49 @@
+{
+	"name": "AzureDatabricksDeltaLakeDataset3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatabricksDeltaLake228marzo",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "default",
+			"table": "gold"
+		},
+		"schema": [
+			{
+				"name": "Employee_Name",
+				"type": "string"
+			},
+			{
+				"name": "GenderID",
+				"type": "integer"
+			},
+			{
+				"name": "PositionID",
+				"type": "integer"
+			},
+			{
+				"name": "Position",
+				"type": "string"
+			},
+			{
+				"name": "DateofHire",
+				"type": "string"
+			},
+			{
+				"name": "DateofTermination",
+				"type": "string"
+			},
+			{
+				"name": "Department",
+				"type": "string"
+			},
+			{
+				"name": "RecruitmentSource",
+				"type": "string"
+			}
+		]
+	}
+}
