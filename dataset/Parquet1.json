@@ -12,7 +12,7 @@
 				"type": "AzureBlobFSLocation",
 				"fileSystem": "datalakesynapsecreacontainer"
 			},
-			"compressionCodec": "snappy"
+			"compressionCodec": "none"
 		},
 		"schema": []
 	}
