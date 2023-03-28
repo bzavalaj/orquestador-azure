@@ -1,0 +1,19 @@
+{
+	"name": "Parquet5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "28marzoAzureDataLakeStoragesynapseLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "datalakesynapsecreacontainer"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

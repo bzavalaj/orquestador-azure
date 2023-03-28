@@ -1,21 +1,19 @@
 {
-	"name": "DelimitedText5",
+	"name": "Parquet4",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStoragestaging",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "_SUCCESS",
 				"container": "stage12"
 			},
-			"columnDelimiter": ",",
-			"rowDelimiter": "\n",
-			"escapeChar": "\\",
-			"quoteChar": "\""
+			"compressionCodec": "snappy"
 		},
 		"schema": []
 	}
